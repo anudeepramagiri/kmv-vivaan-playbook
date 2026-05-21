@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,11 +11,11 @@
 <style>
   :root{
     --ink:#1a1714;
-    --paper:#f7f2e5;
-    --paper-2:#ede8d4;
-    --paper-3:#e3dcc5;
-    --rule:#c8bfa4;
-    --rule-soft:#d9cfb6;
+    --paper:#ffffff;
+    --paper-2:#f3f3f3;
+    --paper-3:#e8e8e8;
+    --rule:#d8d8d8;
+    --rule-soft:#e5e5e5;
     --accent:#c94d2b;
     --accent-soft:#d97050;
     --accent-2:#12a8b3;
@@ -23,8 +23,8 @@
     --gold:#b8a630;
     --plum:#6b3a4f;
     --indigo:#1e3796;
-    --muted:#6b6357;
-    --muted-2:#8a8170;
+    --muted:#666666;
+    --muted-2:#888888;
     --kmv-gold:#b8a630;
     --kmv-blue:#1e3796;
     --kmv-teal:#12a8b3;
@@ -38,9 +38,6 @@
     font-weight:400;
     line-height:1.78;
     letter-spacing:0.012em;
-    background-image:
-      radial-gradient(circle at 20% 10%, rgba(184,166,48,0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 90%, rgba(18,168,179,0.04) 0%, transparent 50%);
     min-height:100vh;
   }
   .container{max-width:100%;padding:0 20px}
@@ -53,7 +50,7 @@
     top:0;
     z-index:100;
     backdrop-filter:blur(12px);
-    background:rgba(247,242,229,0.96);
+    background:rgba(255,255,255,0.96);
   }
   .topbar-inner{
     display:flex;
@@ -78,7 +75,7 @@
     letter-spacing:0.3em;
     text-transform:uppercase;
     color:var(--accent-2);
-    font-weight:500;
+    font-weight:600;
   }
   .doc-meta-sub{
     font-family:'JetBrains Mono',monospace;
@@ -154,7 +151,7 @@
     font-size:10px;
     color:var(--accent-2);
     margin-bottom:6px;
-    font-weight:500;
+    font-weight:600;
     letter-spacing:0.2em;
   }
   .tab.active .tab-num{
@@ -186,8 +183,8 @@
     padding-bottom:40px;
     border-bottom:1px solid var(--rule);
     background-image:
-      linear-gradient(45deg, rgba(184,166,48,0.05) 1px, transparent 1px),
-      linear-gradient(-45deg, rgba(184,166,48,0.05) 1px, transparent 1px);
+      linear-gradient(45deg, rgba(18,168,179,0.04) 1px, transparent 1px),
+      linear-gradient(-45deg, rgba(18,168,179,0.04) 1px, transparent 1px);
     background-size: 28px 28px;
     background-position: center center;
   }
@@ -197,6 +194,7 @@
     letter-spacing:0.3em;
     text-transform:uppercase;
     color:var(--accent-2);
+    font-weight:600;
     margin-bottom:16px;
   }
   h1{
@@ -424,6 +422,7 @@
   .analysis-block h4{
     font-family:'JetBrains Mono',monospace;
     font-size:12.5px;
+    font-weight:600;
     letter-spacing:0.2em;
     text-transform:uppercase;
     margin-bottom:12px;
@@ -731,7 +730,7 @@
     background:rgba(18,168,179,0.06);
     border-left:2px solid var(--accent-2);
   }
-  .pillar-deploy h4{color:var(--accent-2);}
+  .pillar-deploy h4{color:var(--accent-2);font-weight:600;}
 
   /* ===== EXECUTIVE SUMMARY (OVERVIEW TAB) ===== */
   .exec-summary{
@@ -812,6 +811,7 @@
     font-size:12px;
     letter-spacing:0.2em;
     color:var(--accent-2);
+    font-weight:600;
     text-transform:uppercase;
     margin-bottom:10px;
   }
@@ -919,7 +919,7 @@
     overflow-y:hidden;
     scroll-snap-type:x proximity;
     scroll-behavior:smooth;
-    background:#ffffff;
+    background:#fffef9;
     background-image:
       linear-gradient(rgba(26,24,22,0.05) 1px, transparent 1px),
       linear-gradient(90deg, rgba(26,24,22,0.05) 1px, transparent 1px),
@@ -1022,7 +1022,7 @@
   /* Staggered fade-in + continuous draw.io-style flowing dash animation */
   .roadmap-svg path{
     opacity:0;
-    animation:fadeInLine 0.5s ease-out forwards, dashFlow 1.4s linear infinite;
+    animation:fadeInLine 0.5s ease-out forwards, dashFlow 0.35s linear infinite;
   }
   .roadmap-svg path:nth-of-type(1){animation-delay:0.20s;}
   .roadmap-svg path:nth-of-type(2){animation-delay:0.30s;}
@@ -1052,7 +1052,7 @@
     to{opacity:1;}
   }
   @keyframes dashFlow{
-    to{stroke-dashoffset:-11;}
+    to{stroke-dashoffset:-18;}
   }
 
   /* Station nodes */
@@ -1719,38 +1719,38 @@
         </defs>
 
         <!-- Phase 01 — arcs alternate UP / DOWN for wave rhythm -->
-        <path d="M 200 360 C 285 335,360 335,445 360" stroke="#b8542f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 445 360 C 530 385,635 385,720 360" stroke="#c8632e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
+        <path d="M 200 360 C 285 335,360 335,445 360" stroke="#b8542f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 445 360 C 530 385,635 385,720 360" stroke="#c8632e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Phase 02 -->
-        <path d="M 720 360 C 815 335,895 335,990 360" stroke="#d2722d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 990 360 C 1075 385,1160 385,1245 360" stroke="#bd8a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
+        <path d="M 720 360 C 815 335,895 335,990 360" stroke="#d2722d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 990 360 C 1075 385,1160 385,1245 360" stroke="#bd8a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Phase 03 — to decision gate -->
-        <path d="M 1245 360 C 1315 358,1375 358,1445 360" stroke="#a8843d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
+        <path d="M 1245 360 C 1315 358,1375 358,1445 360" stroke="#a8843d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Apartment branch — 6 → 6A → 6B → merge -->
-        <path d="M 1445 360 C 1465 310,1520 240,1585 240" stroke="#6a7da0" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
-        <path d="M 1585 240 C 1645 255,1725 225,1785 240" stroke="#4a5a7a" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
-        <path d="M 1785 240 C 1870 240,1930 240,1930 360" stroke="#3a4a6a" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
+        <path d="M 1445 360 C 1465 310,1520 240,1585 240" stroke="#6a7da0" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 1585 240 C 1645 255,1725 225,1785 240" stroke="#4a5a7a" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 1785 240 C 1870 240,1930 240,1930 360" stroke="#3a4a6a" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Villa branch — 6 → 6C → 6D → merge -->
-        <path d="M 1445 360 C 1465 410,1520 510,1585 510" stroke="#8a5572" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
-        <path d="M 1585 510 C 1645 495,1725 525,1785 510" stroke="#6b3a4f" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
-        <path d="M 1785 510 C 1870 510,1930 510,1930 360" stroke="#5a2f44" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 8" filter="url(#lineShadow)"/>
+        <path d="M 1445 360 C 1465 410,1520 510,1585 510" stroke="#8a5572" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 1585 510 C 1645 495,1725 525,1785 510" stroke="#6b3a4f" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 1785 510 C 1870 510,1930 510,1930 360" stroke="#5a2f44" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Phase 04 — merge → 7 → 8 → 9 → 10 -->
-        <path d="M 1930 360 C 1970 380,2050 380,2090 360" stroke="#5d8166" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 2090 360 C 2165 335,2225 335,2300 360" stroke="#3a5a40" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 2300 360 C 2375 385,2435 385,2510 360" stroke="#306b5a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 2510 360 C 2585 335,2645 335,2720 360" stroke="#2e6e72" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
+        <path d="M 1930 360 C 1970 380,2050 380,2090 360" stroke="#5d8166" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 2090 360 C 2165 335,2225 335,2300 360" stroke="#3a5a40" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 2300 360 C 2375 385,2435 385,2510 360" stroke="#306b5a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 2510 360 C 2585 335,2645 335,2720 360" stroke="#2e6e72" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
         <!-- Phase 05 — 10 → 11 → 12 → 13 → 14 → 15 -->
-        <path d="M 2720 360 C 2810 385,2880 385,2970 360" stroke="#2f5e7e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 2970 360 C 3030 335,3110 335,3170 360" stroke="#3a4868" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 3170 360 C 3230 385,3310 385,3370 360" stroke="#4a3a5a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 3370 360 C 3430 335,3510 335,3570 360" stroke="#6b3a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
-        <path d="M 3570 360 C 3630 385,3730 385,3790 360" stroke="#2a2520" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 9" filter="url(#lineShadow)"/>
+        <path d="M 2720 360 C 2810 385,2880 385,2970 360" stroke="#2f5e7e" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 2970 360 C 3030 335,3110 335,3170 360" stroke="#3a4868" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 3170 360 C 3230 385,3310 385,3370 360" stroke="#4a3a5a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 3370 360 C 3430 335,3510 335,3570 360" stroke="#6b3a4f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
+        <path d="M 3570 360 C 3630 385,3730 385,3790 360" stroke="#2a2520" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="2 16" filter="url(#lineShadow)"/>
 
       </svg>
 
@@ -2893,7 +2893,7 @@
       <div class="label">Intent</div>
       <p>Establish KMV as a capable, established infrastructure organisation — not a real-estate startup. The customer should leave this step thinking <em>"this developer has built things that matter."</em> Anchor every phrasing in KMV's four legacy pillars: 100+ year legacy, landmark pioneer credentials, multi-sector expertise, and in-house PMC.</p>
     </div>
-    <div class="intent-box" style="background:rgba(58,90,64,0.06);border-left-color:var(--accent-2);margin-bottom:24px;">
+    <div class="intent-box" style="background:rgba(18,168,179,0.05);border-left-color:var(--accent-2);margin-bottom:24px;">
       <div class="label" style="color:var(--accent-2);">Four Points to Anchor Every Phrasing</div>
       <p><strong>100+ years construction legacy</strong> — Open with the century. It instantly separates KMV from every developer in the room.</p>
       <p><strong>Pioneer in landmark projects</strong> — KMV was first, not a follower, in every sector it entered. Airports, institutions, national infrastructure.</p>
